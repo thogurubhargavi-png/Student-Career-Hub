@@ -74,3 +74,6 @@ Bhargavi
 ## 📸 Project Preview
 
 ![Student Career Hub Home Page](home-page.png)
+## 🌐 Live Website
+
+[Visit Student Career Hub](https://thogurubhargavi-png.github.io/Student-Career-Hub/)
