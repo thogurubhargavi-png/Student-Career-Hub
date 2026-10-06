@@ -1,0 +1,767 @@
+/* ============================= */
+/* BASIC SETTINGS */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* ============================= */
+/* NAVIGATION BAR */
+/* ============================= */
+
+header {
+    background-color: #1e3a8a;
+    padding: 18px 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #93c5fd;
+}
+
+
+/* ============================= */
+/* HOME SECTION */
+/* ============================= */
+
+#home {
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #dbeafe;
+}
+
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+#home p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    color: #374151;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+button {
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* ALL SECTIONS */
+/* ============================= */
+
+section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 34px;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+section > p {
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 40px;
+}
+
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+section:nth-of-type(2) div,
+#roadmaps div,
+#skills div,
+#resources div {
+    display: inline-block;
+    vertical-align: top;
+
+    margin: 12px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+section:nth-of-type(2) div:hover,
+#roadmaps div:hover,
+#skills div:hover,
+#resources div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+section div h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #1e3a8a;
+}
+
+section div p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* ============================= */
+/* ROADMAPS */
+/* ============================= */
+
+#roadmaps {
+    background-color: #eef4ff;
+}
+
+
+/* ============================= */
+/* SKILLS */
+/* ============================= */
+
+#skills {
+    background-color: #f8fafc;
+}
+
+
+/* ============================= */
+/* RESOURCES */
+/* ============================= */
+
+#resources {
+    background-color: #eef4ff;
+}
+
+
+/* ============================= */
+/* ABOUT */
+/* ============================= */
+
+#about {
+    background-color: white;
+}
+
+#about p {
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+/* ============================= */
+/* ROADMAP POPUP */
+/* ============================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.modal-content {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    color: #374151;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.close-button:hover {
+    background-color: transparent;
+    color: #1e3a8a;
+    transform: none;
+}
+
+
+.modal-content h2 {
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    padding-right: 30px;
+}
+
+
+.roadmap-step {
+    background-color: #eef4ff;
+    margin: 12px 0;
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #1e3a8a;
+    text-align: left;
+}
+
+
+.roadmap-step h3 {
+    color: #1e3a8a;
+    margin-bottom: 6px;
+}
+
+
+.roadmap-step p {
+    color: #4b5563;
+    margin: 0;
+    line-height: 1.5;
+}
+/* ============================= */
+/* PROGRESS TRACKER */
+/* ============================= */
+
+#progress {
+    background-color: white;
+}
+
+
+.progress-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.progress-item {
+    margin-bottom: 30px;
+}
+
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #374151;
+}
+
+
+.progress-bar {
+    width: 100%;
+    height: 18px;
+    background-color: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.progress-fill {
+    height: 100%;
+    background-color: #1e3a8a;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+
+#progress button {
+    margin-top: 10px;
+}
+/* ============================= */
+/* SKILL CARDS */
+/* ============================= */
+
+.skill-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 260px;
+    min-height: 390px;
+    margin: 12px;
+    padding: 30px 22px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.skill-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.skill-card h3 {
+    font-size: 24px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+
+.skill-level {
+    display: inline-block;
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+
+.skill-card p {
+    min-height: 65px;
+    line-height: 1.5;
+}
+
+
+.skill-progress {
+    width: 100%;
+    height: 12px;
+    background-color: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+
+.skill-progress-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #1e3a8a;
+    border-radius: 20px;
+    transition: width 0.8s ease;
+}
+
+
+.skill-percent {
+    min-height: auto !important;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+
+.skill-card button {
+    margin-top: 5px;
+}
+/* Learning Content */
+
+.learning-content {
+    max-width: 700px;
+    text-align: left;
+}
+
+.learning-content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.learning-topic {
+    background: #f5f8ff;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.learning-topic h3 {
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.learning-topic ul {
+    margin-left: 20px;
+}
+
+.learning-topic li {
+    margin-bottom: 6px;
+}
+
+.complete-button {
+    display: block;
+    margin: 25px auto 5px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.complete-button:hover {
+    background: #1d4ed8;
+}
+/* Coding Practice */
+
+.coding-content {
+    max-width: 700px;
+    text-align: left;
+}
+
+.coding-content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.coding-question {
+    background: #f5f8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.coding-question h3 {
+    color: #1e3a8a;
+}
+
+.coding-question pre {
+    background: #1e293b;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.coding-question input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#codingResult {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Aptitude Practice */
+
+.aptitude-content {
+    max-width: 700px;
+    text-align: left;
+}
+
+.aptitude-content h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.aptitude-question {
+    background: #f5f8ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.aptitude-question h3 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.aptitude-option {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 15px;
+}
+
+.aptitude-option:hover {
+    background: #eef4ff;
+}
+
+#aptitudeResult {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+/* Resume Builder */
+
+.resume-content {
+    max-width: 800px;
+    text-align: left;
+}
+
+.resume-content h2 {
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.resume-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.resume-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.resume-form input,
+.resume-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.resume-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.resume-form button {
+    margin-top: 15px;
+}
+
+
+/* Resume Preview */
+
+.resume-preview {
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.resume-preview h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #1e3a8a;
+}
+
+.resume-preview > p:first-of-type {
+    text-align: center;
+    color: #555;
+}
+
+.resume-preview hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.resume-preview h2 {
+    color: #1e3a8a;
+    border-bottom: 2px solid #1e3a8a;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+.resume-preview p {
+    line-height: 1.7;
+    color: #333;
+}
+.resume-actions {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.resume-actions button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* Placement Readiness Dashboard */
+
+#dashboard {
+    padding: 70px 8%;
+    text-align: center;
+    background: #f8fafc;
+}
+
+#dashboard h2 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+#dashboard > p {
+    color: #555;
+    margin-bottom: 35px;
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.dashboard-card p {
+    color: #555;
+    line-height: 1.6;
+}
+@media (max-width: 900px) {
+
+    .dashboard-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* Overall Placement Readiness */
+
+.readiness-card {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+}
+
+.readiness-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 10px solid #dbeafe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.readiness-circle span {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e3a8a;
+}
+
+#readinessMessage {
+    font-weight: 500;
+}
+.top-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1e3a8a;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.top-button:hover {
+    background: #2563eb;
+}

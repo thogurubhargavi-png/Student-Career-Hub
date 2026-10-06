@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Career Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <header>
+    <nav>
+
+        <h2>Student Career Hub</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#roadmaps">Roadmaps</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+    <!-- Home Section -->
+
+    <section id="home">
+
+        <h1>Build Your Career With Confidence</h1>
+
+        <p>
+            Learn new skills, practice regularly,
+            and prepare yourself for your dream career.
+        </p>
+
+        <button onclick="location.href='#roadmaps'">
+            Explore Roadmaps
+        </button>
+
+    </section>
+
+
+    <!-- What We Offer -->
+
+    <section>
+
+        <h2>What We Offer</h2>
+
+        <div class="card" onclick="openCodingPractice()">
+
+    <h3>💻 Coding Practice</h3>
+
+    <p>
+        Practice programming questions and improve your coding skills.
+    </p>
+
+    <button>Start Practice</button>
+
+</div>
+
+
+      <div class="card">
+
+    <h3>🧠 Aptitude Practice</h3>
+
+    <p>
+        Practice quantitative aptitude and logical reasoning.
+    </p>
+
+    <button onclick="openAptitudePractice()">
+        Start Practice
+    </button>
+</div>
+<div class="card">
+
+    <h3>📄 Resume Builder</h3>
+
+    <p>
+        Create a professional resume for your placement preparation.
+    </p>
+
+    <button onclick="openResumeBuilder()">
+        Create Resume
+    </button>
+
+</div>
+
+</div>
+        <div>
+            <h3>🎯 Career Roadmaps</h3>
+
+            <p>
+                Follow step-by-step roadmaps
+                for different careers.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Roadmaps Section -->
+
+    <section id="roadmaps">
+
+        <h2>Career Roadmaps</h2>
+
+        <p>
+            Choose a career path and follow
+            the recommended learning journey.
+        </p>
+
+<div>
+    <h3>📊 Data Analyst</h3>
+
+    <p>
+        Excel → SQL → Python → Power BI → Projects
+    </p>
+
+    <button onclick="showRoadmap('data')">
+        View Roadmap
+    </button>
+</div>
+
+
+ <div>
+    <h3>💻 Software Developer</h3>
+
+    <p>
+        Programming → DSA → Git → Projects → Interview Preparation
+    </p>
+
+    <button onclick="showRoadmap('software')">
+        View Roadmap
+    </button>
+</div>
+
+<div>
+    <h3>🌐 Web Developer</h3>
+
+    <p>
+        HTML → CSS → JavaScript → Backend → Projects
+    </p>
+
+    <button onclick="showRoadmap('web')">
+        View Roadmap
+    </button>
+</div>
+    </section>
+
+
+    <!-- Skills Section -->
+
+<section id="skills">
+
+    <h2>💻 Skills to Learn</h2>
+
+    <p>
+        Build the technical skills you need for your career.
+    </p>
+
+
+    <div class="skill-card">
+
+        <div class="skill-icon">☕</div>
+
+        <h3>Java</h3>
+
+        <span class="skill-level">Beginner</span>
+
+        <p>
+            Learn Java programming, OOP concepts,
+            and problem solving.
+        </p>
+
+        <div class="skill-progress">
+            <div
+                id="skillJavaProgress"
+                class="skill-progress-fill">
+            </div>
+        </div>
+
+        <p class="skill-percent">
+            Progress: <span id="skillJavaPercent">0%</span>
+        </p>
+
+        <button onclick="startLearning('Java')">
+            Start Learning
+        </button>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <div class="skill-icon">🗄️</div>
+
+        <h3>SQL</h3>
+
+        <span class="skill-level">Beginner</span>
+
+        <p>
+            Learn databases, SQL queries,
+            joins and data analysis.
+        </p>
+
+        <div class="skill-progress">
+            <div
+                id="skillSqlProgress"
+                class="skill-progress-fill">
+            </div>
+        </div>
+
+        <p class="skill-percent">
+            Progress: <span id="skillSqlPercent">0%</span>
+        </p>
+
+        <button onclick="startLearning('SQL')">
+            Start Learning
+        </button>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <div class="skill-icon">🐍</div>
+
+        <h3>Python</h3>
+
+        <span class="skill-level">Beginner</span>
+
+        <p>
+            Learn Python programming and
+            data analysis fundamentals.
+        </p>
+
+        <div class="skill-progress">
+            <div
+                id="skillPythonProgress"
+                class="skill-progress-fill">
+            </div>
+        </div>
+
+        <p class="skill-percent">
+            Progress: <span id="skillPythonPercent">0%</span>
+        </p>
+
+        <button onclick="startLearning('Python')">
+            Start Learning
+        </button>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <div class="skill-icon">📊</div>
+
+        <h3>Power BI</h3>
+
+        <span class="skill-level">Beginner</span>
+
+        <p>
+            Learn data visualization,
+            dashboards and reports.
+        </p>
+
+        <div class="skill-progress">
+            <div
+                id="skillPowerBIProgress"
+                class="skill-progress-fill">
+            </div>
+        </div>
+
+        <p class="skill-percent">
+            Progress: <span id="skillPowerBIPercent">0%</span>
+        </p>
+
+        <button onclick="startLearning('Power BI')">
+            Start Learning
+        </button>
+
+    </div>
+
+</section>
+
+
+    <!-- Resources Section -->
+
+    <section id="resources">
+
+        <h2>Learning Resources</h2>
+
+        <p>
+            Useful resources to improve your technical skills.
+        </p>
+
+        <div>
+            <h3>📚 Coding</h3>
+            <p>Practice programming and problem-solving regularly.</p>
+        </div>
+
+        <div>
+            <h3>📖 SQL</h3>
+            <p>Practice SQL queries using real-world datasets.</p>
+        </div>
+
+        <div>
+            <h3>🎓 Placement Preparation</h3>
+            <p>Practice aptitude, coding and interview questions.</p>
+        </div>
+
+    </section>
+<!-- Progress Section -->
+
+<section id="progress">
+
+    <h2>📊 My Learning Progress</h2>
+
+    <p>
+        Track your progress as you develop your skills.
+    </p>
+
+
+    <div class="progress-container">
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+                <span>Java</span>
+                <span id="javaPercent">70%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    class="progress-fill"
+                    id="javaProgress"
+                    style="width: 70%;">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+                <span>SQL</span>
+                <span id="sqlPercent">50%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    class="progress-fill"
+                    id="sqlProgress"
+                    style="width: 50%;">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+                <span>Python</span>
+                <span id="pythonPercent">30%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    class="progress-fill"
+                    id="pythonProgress"
+                    style="width: 30%;">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+                <span>Power BI</span>
+                <span id="powerbiPercent">20%</span>
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    class="progress-fill"
+                    id="powerbiProgress"
+                    style="width: 20%;">
+                </div>
+            </div>
+
+        </div>
+
+
+        <button onclick="updateProgress()">
+            Update Progress
+        </button>
+
+    </div>
+
+</section>
+<!-- Placement Readiness Dashboard -->
+<section id="dashboard">
+
+    <h2>📊 Placement Readiness Dashboard</h2>
+
+    <p>
+        Track your preparation for campus placements in one place.
+    </p>
+
+    <div class="dashboard-container">
+
+        <div class="dashboard-card">
+            <h3>💻 Coding Practice</h3>
+            <p id="dashboardCodingScore">Not attempted yet</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🧠 Aptitude Practice</h3>
+            <p id="dashboardAptitudeScore">Not attempted yet</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>📚 Skills Learning</h3>
+            <p id="dashboardSkillsCount">4 skills available</p>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>📄 Resume Builder</h3>
+            <p>Generate and save your resume as PDF.</p>
+        </div>
+        <div class="dashboard-card readiness-card">
+
+            <h3>🚀 Overall Readiness</h3>
+
+    <div class="readiness-circle">
+        <span id="readinessPercent">0%</span>
+    </div>
+
+    <p id="readinessMessage">
+        Complete your preparation to improve your score.
+    </p>
+
+</div>
+
+    </div>
+
+</section>
+
+    <!-- About Section -->
+
+    <section id="about">
+
+        <h2>About Student Career Hub</h2>
+
+        <p>
+            Student Career Hub is a learning platform designed
+            to help students develop technical skills,
+            practice for placements and choose suitable
+            career paths.
+        </p>
+
+    </section>
+    <!-- Roadmap Popup -->
+
+<div id="roadmapModal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-button" onclick="closeRoadmap()">
+            ×
+        </button>
+
+        <h2 id="roadmapTitle"></h2>
+
+        <div id="roadmapContent"></div>
+
+    </div>
+
+</div>
+<!-- Learning Modal -->
+<div id="learningModal" class="modal">
+
+    <div class="modal-content learning-content">
+
+        <button class="close-button" onclick="closeLearning()">×</button>
+
+        <h2 id="learningTitle"></h2>
+
+        <div id="learningBody"></div>
+
+    </div>
+
+</div>
+<!-- Coding Practice Modal -->
+<div id="codingModal" class="modal">
+
+    <div class="modal-content coding-content">
+
+        <button
+            class="close-button"
+            onclick="closeCodingPractice()">
+            ×
+        </button>
+
+        <h2>💻 Java Coding Practice</h2>
+
+        <div class="coding-question">
+
+            <h3 id="questionNumber">Question 1</h3>
+
+            <p id="questionText">
+                What is the output of the following Java code?
+            </p>
+
+            <pre id="questionCode">int a = 10;
+System.out.println(a);</pre>
+
+            <input
+                type="text"
+                id="codingAnswer"
+                placeholder="Enter your answer"
+            >
+
+            <button
+                class="complete-button"
+                id="checkButton"
+                onclick="checkCodingAnswer()">
+                Check Answer
+            </button>
+
+            <p id="codingResult"></p>
+
+            <button
+                class="complete-button"
+                id="nextButton"
+                onclick="nextQuestion()"
+                style="display: none;">
+                Next Question
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Aptitude Practice Modal -->
+<div id="aptitudeModal" class="modal">
+
+    <div class="modal-content aptitude-content">
+
+        <button
+            class="close-button"
+            onclick="closeAptitudePractice()">
+            ×
+        </button>
+
+        <h2>🧠 Aptitude Practice</h2>
+
+        <div class="aptitude-question">
+
+            <h3 id="aptitudeQuestionNumber">
+                Question 1
+            </h3>
+
+            <p id="aptitudeQuestionText"></p>
+
+            <div id="aptitudeOptions"></div>
+
+            <p id="aptitudeResult"></p>
+
+            <button
+                class="complete-button"
+                id="aptitudeCheckButton"
+                onclick="checkAptitudeAnswer()">
+                Check Answer
+            </button>
+
+            <button
+                class="complete-button"
+                id="aptitudeNextButton"
+                onclick="nextAptitudeQuestion()"
+                style="display: none;">
+                Next Question
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Resume Builder Modal -->
+<div id="resumeModal" class="modal">
+
+    <div class="modal-content resume-content">
+
+        <button
+            class="close-button"
+            onclick="closeResumeBuilder()">
+            ×
+        </button>
+
+        <h2>📄 Resume Builder</h2>
+
+        <div class="resume-form">
+
+            <label>Full Name</label>
+            <input
+                type="text"
+                id="resumeName"
+                placeholder="Enter your full name">
+
+            <label>Email</label>
+            <input
+                type="email"
+                id="resumeEmail"
+                placeholder="Enter your email">
+
+            <label>Phone</label>
+            <input
+                type="text"
+                id="resumePhone"
+                placeholder="Enter your phone number">
+
+            <label>College</label>
+            <input
+                type="text"
+                id="resumeCollege"
+                placeholder="Enter your college name">
+
+            <label>Degree</label>
+            <input
+                type="text"
+                id="resumeDegree"
+                placeholder="Example: B.Tech - ECE">
+
+            <label>Skills</label>
+            <textarea
+                id="resumeSkills"
+                placeholder="Example: Java, SQL, Python, Power BI">
+            </textarea>
+
+            <label>Projects</label>
+            <textarea
+                id="resumeProjects"
+                placeholder="Enter your project details">
+            </textarea>
+
+            <label>Certifications</label>
+            <textarea
+                id="resumeCertifications"
+                placeholder="Enter your certifications">
+            </textarea>
+
+            <button
+                class="complete-button"
+                onclick="generateResume()">
+                Generate Resume
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<button
+    class="top-button"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    ↑ Back to Top
+</button>
+<!-- Footer -->
+<footer>
+
+    <p>
+        © 2026 Student Career Hub
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
