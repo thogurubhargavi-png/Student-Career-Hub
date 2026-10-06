@@ -71,3 +71,6 @@ The dashboard combines practice scores, skill progress, and resume completion to
 ## 👩‍💻 Author
 
 Bhargavi
+## 📸 Project Preview
+
+![Student Career Hub Home Page](home-page.png)
